@@ -122,7 +122,7 @@ kmlInput.addEventListener('change', async (e) => {
 });
 
 btnOpenSheet.addEventListener('click', () => {
-  const ssId = '1OkLIF2l976sFlzmgC8McDINrnk0UrZuJ/edit?usp=sharing&ouid=108221460704940092120&rtpof=true&sd=true';
+  const ssId = '13T-Bj8luBODdqzo2pLI-QRANAET1ooQe/edit?gid=1090064673#gid=1090064673';
   btnOpenSheet.setAttribute('href', `https://docs.google.com/spreadsheets/d/${ssId}`);
 });
 
@@ -295,8 +295,8 @@ async function onSelectNamaJalan(nama){
 
     const lines = matchData.matches.map((m, idx) => {
       const name = m.name || m.designator || m.telco_pole_tag || '(unknown)';
-      const desa = m.desa || '(unknown)';
-      const kec = m.kecamatan || '(unknown)';
+      const dis  = m.distribusi || m.dis || 'Odc Belum Tersedia';
+      const odc  = m.odc || 'Odc Belum Tersedia';
       const lng = m.longitude ?? m.lng ?? m.long ?? '';
       const lat = m.latitude ?? m.lat ?? '';
       return `${idx+1}. ${name} – ${lng}   ${lat}`;
@@ -343,16 +343,16 @@ function generateKmlFromMatches(matches) {
     const lng = m.longitude ?? m.lng ?? m.long;
     const lat = m.latitude ?? m.lat;
 
-    const desa = m.desa || 'Desa Belum Tersedia';
-    const kec  = m.kecamatan || 'Kecamatan Belum Tersedia';
+    const dis  = m.distribusi || m.dis || 'Odc Belum Tersedia';
+    const odc  = m.odc || 'Odc Belum Tersedia';
 
     return `
     <Placemark>
       <name>${nama}</name>
       <description><![CDATA[
         ${nama}
-${desa}
-${kec}
+${dis}
+${odc}
       ]]></description>
       <Point>
         <coordinates>${lng},${lat}</coordinates>
