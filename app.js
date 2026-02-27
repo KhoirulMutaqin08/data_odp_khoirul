@@ -122,7 +122,7 @@ kmlInput.addEventListener('change', async (e) => {
 });
 
 btnOpenSheet.addEventListener('click', () => {
-  const ssId = '1vYrvhJ6zov19xtEvN9do8Fat_LHa5_FpzBzmipTs4eI/edit?gid=0#gid=0';
+  const ssId = '1OkLIF2l976sFlzmgC8McDINrnk0UrZuJ/edit?usp=sharing&ouid=108221460704940092120&rtpof=true&sd=true';
   btnOpenSheet.setAttribute('href', `https://docs.google.com/spreadsheets/d/${ssId}`);
 });
 
@@ -349,10 +349,9 @@ function generateKmlFromMatches(matches) {
     <Placemark>
       <name>${nama}</name>
       <description><![CDATA[
-        Nama ODP: ${nama}<br/>
-        Desa: ${desa}<br/>
-        Kecamatan: ${kec}<br/>
-        Kabupaten: ${kab}
+        ${nama}
+${desa}
+${kec}
       ]]></description>
       <Point>
         <coordinates>${lng},${lat}</coordinates>
