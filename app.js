@@ -295,7 +295,7 @@ async function onSelectNamaJalan(nama){
 
     const lines = matchData.matches.map((m, idx) => {
       const name = m.name || m.telco_pole_tag || '(unknown)';
-      const dis  = m.distribusi || m.dis || 'Odc Belum Tersedia';
+      const dis  = m.distribusi || m.dis || 'Dis Belum Tersedia';
       const odc  = m.odc || 'Odc Belum Tersedia';
       const lng = m.longitude ?? m.lng ?? m.long ?? '';
       const lat = m.latitude ?? m.lat ?? '';
@@ -343,7 +343,7 @@ function generateKmlFromMatches(matches) {
     const lng = m.longitude ?? m.lng ?? m.long;
     const lat = m.latitude ?? m.lat;
 
-    const dis  = m.distribusi || m.dis || 'Odc Belum Tersedia';
+    const dis  = m.distribusi || m.dis || 'Dis Belum Tersedia';
     const odc  = m.odc || 'Odc Belum Tersedia';
 
     return `
