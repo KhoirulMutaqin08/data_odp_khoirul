@@ -294,7 +294,7 @@ async function onSelectNamaJalan(nama){
     btnDownloadKml.disabled = false;     // Aktifkan tombol
 
     const lines = matchData.matches.map((m, idx) => {
-      const name = m.name || m.designator || m.telco_pole_tag || '(unknown)';
+      const name = m.name || m.telco_pole_tag || '(unknown)';
       const dis  = m.distribusi || m.dis || 'Odc Belum Tersedia';
       const odc  = m.odc || 'Odc Belum Tersedia';
       const lng = m.longitude ?? m.lng ?? m.long ?? '';
@@ -339,7 +339,7 @@ function generateKmlFromMatches(matches) {
 
   const placemarks = matches.map(m => {
 
-    const nama = m.name || m.designator || m.telco_pole_tag || '(unknown)';
+    const nama = m.name || m.telco_pole_tag || '(unknown)';
     const lng = m.longitude ?? m.lng ?? m.long;
     const lat = m.latitude ?? m.lat;
 
