@@ -1,7 +1,7 @@
 
 // ------------------ LOGIN CHECK ------------------
 // app.js (module) - Final + Fitur Download KML
-const API_URL = 'https://script.google.com/macros/s/AKfycbzxdAFgQqD3e6Zw1Y7yKNB6bYYLJg0ADOqUgfglWWPq8cena6ZcPq8nJjFCD5uzd_XQwQ/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbxd317ETzaxWTlt0rE53omf6UxxP7_SWqvYTzS0IJyyMfZLCoC2nYKzWYubgAyt0DHS/exec';
 
 // ----- Helper utilities 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -122,7 +122,7 @@ kmlInput.addEventListener('change', async (e) => {
 });
 
 btnOpenSheet.addEventListener('click', () => {
-  const ssId = '13T-Bj8luBODdqzo2pLI-QRANAET1ooQe';
+  const ssId = '1wdjOsAv6hMoP8uB8yZEC1ageRGyBeQ-V-EtydPT4HCU';
   btnOpenSheet.setAttribute('href', 
     `https://docs.google.com/spreadsheets/d/${ssId}`
   );
