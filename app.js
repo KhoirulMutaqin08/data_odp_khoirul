@@ -1,7 +1,7 @@
 
 // ------------------ LOGIN CHECK ------------------
 // app.js (module) - Final + Fitur Download KML
-const API_URL = 'https://script.google.com/macros/s/AKfycbz19Ew98Jk5Tf48zr1l5dD_Qb3zVy7MHxRCOS7-FgfW645Jq-uroDPYuQ4HT1AFE-gPFg/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwqA8_vQwucWOIueaycC9chi4t0KicHJxv4GWmL3p1wrSxTbvJatASYIrOY-XUmW7cF/exec';
 
 // ----- Helper utilities 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -122,10 +122,8 @@ kmlInput.addEventListener('change', async (e) => {
 });
 
 btnOpenSheet.addEventListener('click', () => {
-  const ssId = '1Rw_nBWdESf6Mtg-QOnDiyXHaBq5QmvsO9yzAzdVK26M/edit?gid=0#gid=0';
-  btnOpenSheet.setAttribute('href', 
-    `https://docs.google.com/spreadsheets/d/${ssId}`
-  );
+  const ssId = '1eOyC_99J0Po5b0QFqi-BudLpYf9Xu49HKf8cyyiWtzQ';
+  btnOpenSheet.setAttribute('href', `https://docs.google.com/spreadsheets/d/${ssId}`);
 });
 
 // Upload polygon
